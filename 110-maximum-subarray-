@@ -1,0 +1,23 @@
+public static Integer maxSubArraySum(List<Integer> nums, Integer target){
+    Integer sum, max=0;
+    Integer iCurrentIndex=0, iMaxIndex = nums.size()-1;
+    Boolean bNotOverMaxIndex = true;
+
+    while (iCurrentIndex <= iMaxIndex && bNotOverMaxIndex) {
+        if( iCurrentIndex + target > iMaxIndex) {
+            bNotOverMaxIndex = false;
+        }
+        
+        sum = 0;
+        for (Integer j=iCurrentIndex ; j < iCurrentIndex + target ; j++) {
+           sum = sum + nums[j];
+        }
+
+        if (sum > max) {
+            max = sum;
+        }
+
+        iCurrentIndex++;
+    }
+    return max ;
+}
