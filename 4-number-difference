@@ -1,0 +1,2 @@
+public Integer diff(Integer a, Integer b) {
+    return Math.Abs(a-b);
