@@ -4,5 +4,5 @@ public String aOrAn(String word) {
     if (lsVoyels.contains(word.substring(0,1))) {
         sArticle = 'a';
     }
-    return sArticle & ' ' & word;
+    return sArticle + ' ' + word;
 }
