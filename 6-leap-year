@@ -9,8 +9,8 @@ public Boolean isLeapYear(Integer year) {
     return bLeapYear;
 }
 
-public Boolean isDivisibleBy(Integer number, Integer divider) {
-    if (Math.Mod(number,divider)==0){
+public Boolean isDivisibleBy(Integer iNumber, Integer quotientNumber) {
+    if (Math.Mod(iNumber,quotientNumber)==0){
         return true;
     } else {
         return false;
