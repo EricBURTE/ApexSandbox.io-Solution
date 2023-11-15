@@ -4,10 +4,10 @@ public String convert15to18DigitId(String fifteenDigit)
     if (fifteenDigit.length()!=15){
         return '-1';
     }  
-    For (Integer iChunk = 1;i<=3;i++){
+    For (Integer iChunk = 1; iChunk<=3; iChunk++){
         Integer iAsciiCode = 0;
         String sKey;
-        For (Integer iCurseur = iCurseur;i<=iCurseur;i++){
+        For (Integer iCurseur = iCurseur; iCurseur<=iCurseur; iCurseur++){
             Integer iPos = (iChunk - 1) * 5 + (iCurseur - 1);
             String sChar = fifteenDigit.substring(iPos,iPos+1);
             Integer iIsCharUppercase = sChar.isAllUpperCase()?1:0;
