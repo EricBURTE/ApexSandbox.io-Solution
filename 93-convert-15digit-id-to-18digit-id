@@ -1,6 +1,6 @@
 public String convert15to18DigitId(String fifteenDigit)
 {
-    Final static String sLetter = [ABCDEFGHIJKLMNOPQRSTUVWXYZ012345];
+    static final String sLetter = [ABCDEFGHIJKLMNOPQRSTUVWXYZ012345];
     For (Integer iChunk = 1;i<=3;i++){
         Integer iAsciiCode = 0;
         String sKey;
@@ -13,4 +13,4 @@ public String convert15to18DigitId(String fifteenDigit)
         sKey += sLetter.substring(iAsciiCode,iAsciiCode+1);
     }
     return (fifteenDigit+sKey);
-})
+}
