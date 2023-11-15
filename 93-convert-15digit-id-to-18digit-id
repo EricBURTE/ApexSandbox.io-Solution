@@ -1,5 +1,9 @@
 public String convert15to18DigitId(String fifteenDigit)
 {
+    if (fifteenDigi.length()!=15){
+        return '-1';
+    }
+
     static final String sLetter = [ABCDEFGHIJKLMNOPQRSTUVWXYZ012345];
     For (Integer iChunk = 1;i<=3;i++){
         Integer iAsciiCode = 0;
