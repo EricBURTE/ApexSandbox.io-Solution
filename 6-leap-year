@@ -1,0 +1,18 @@
+public Boolean isLeapYear(Integer year) {
+    Boolean bLeapYear = false;
+    if (isDivisibleBy(year,4)){
+        bLeapYear = true;
+    }
+    if (isDivisibleBy(year,100) && !isDivisibleBy(year,400)){
+        bLeapYear = false;
+    }
+    return bLeapYear
+}
+
+public Boolean isDivisibleBy(Integer number, Integer divider) {
+    if (Math.Mod(number,divider)==0){
+        return true;
+    } else {
+        return false;
+    }
+}
