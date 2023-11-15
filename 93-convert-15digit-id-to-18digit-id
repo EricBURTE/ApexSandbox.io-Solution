@@ -1,6 +1,6 @@
 public String convert15to18DigitId(String fifteenDigit)
 {
-    public static final String sLetter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ012345';
+    String sLetter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ012345';
     if (fifteenDigit.length()!=15){
         return '-1';
     }  
