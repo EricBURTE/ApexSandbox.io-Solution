@@ -9,7 +9,6 @@ public String convert15to18DigitId(String fifteenDigit)
 
     For (Integer iChunk = 1; iChunk<=3; iChunk++){
         Integer iAsciiCode = 0;
-        sKey = '';
         For (Integer iCurseur = 1; iCurseur<=5; iCurseur++){
             Integer iPos = (iChunk - 1) * 5 + (iCurseur - 1);
             String sChar = fifteenDigit.substring(iPos,iPos+1);
