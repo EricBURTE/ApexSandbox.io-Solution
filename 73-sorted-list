@@ -1,8 +1,9 @@
 public boolean isSorted(List<Integer> numbers) {
-    
+    public enum EnumListDirection { UNDEFINED, UP, DOWN }
 
 
-    Boolean bSorted=true,bUpwardTrend;
+    Boolean bSorted=true,
+    String sUpwardTrend; // cannot create a e
     EnumListDirection trend = EnumListDirection.Undefined;
 
     if(numbers.size() < 3) {
@@ -23,5 +24,3 @@ public boolean isSorted(List<Integer> numbers) {
     }
    return bSorted; 
 }
-
-public enum EnumListDirection { Undefined, Upwards, Downwards }
