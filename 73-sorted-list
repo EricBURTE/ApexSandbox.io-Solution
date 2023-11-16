@@ -1,25 +1,31 @@
 public boolean isSorted(List<Integer> numbers) {
     //public enum EnumListDirection { UNDEFINED, UP, DOWN }
-
-
     Boolean bSorted=true,
-    String sUpwardTrend; // cannot create a e
-    EnumListDirection trend = EnumListDirection.Undefined;
+    String sDirection = 'UNDEFINED';
 
-    if(numbers.size() < 3) {
-        return true;
-    } 
-    else {
-        bUpwardTrend = numbers[0] < numbers[1] ? true : false;
-    }  
+    //unnecessary
+    //if(numbers.size() < 3) {
+    //    return true;
+    //}
 
     for(Integer i = 0; i < numbers.size()-1 ; i++){
-        if 
-        if(numbers[i] < numbers[i+1] && !bUpwardTrend){
-            bSorted = false;
+ 
+        if(numbers[i] < numbers[i+1]){
+            if (sDirection == 'UNDEFINED'){
+                sDirection = 'UP';
+            }
+            else {
+                bSorted = sDirection =='DOWN' ? false : true ;
+            }
+            
         }
-        if(numbers[i] > numbers[i+1] && bUpwardTrend){
-            bSorted = false;
+        if(numbers[i] > numbers[i+1] && sDirection =='UP'){
+            if (sDirection == 'UNDEFINED'){
+                sDirection = 'DOWN';
+            }
+            else {
+                bSorted = sDirection =='UP' ? false : true ;
+            }
         }
     }
    return bSorted; 
