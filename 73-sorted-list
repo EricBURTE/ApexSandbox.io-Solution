@@ -1,20 +1,13 @@
 public boolean isSorted(List<Integer> numbers) {
     Boolean bSorted = true;
-    //String sDirection = 'UNDEFINED';
     EnumListDirection enumTrend = EnumListDirection.UNDEFINED;
 
     //shortens the execution by 2 loop iterations
     if(numbers.size() < 3) { return true; }
 
     for(Integer i = 0; i < numbers.size()-1 ; i++){
- 
         if(numbers[i] < numbers[i+1]){
-            //if (sDirection == 'UNDEFINED'){
-            //    sDirection = 'UP';
-            //}
-            //else {
-            //    bSorted = sDirection =='DOWN' ? false : true ;
-            //}
+
             if (enumTrend == EnumListDirection.UNDEFINED){
                 enumTrend = EnumListDirection.UP;
             }
