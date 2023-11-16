@@ -1,5 +1,5 @@
 public boolean isSorted(List<Integer> numbers) {
-    public enum EnumListDirection { UNDEFINED, UP, DOWN }
+    //public enum EnumListDirection { UNDEFINED, UP, DOWN }
     Boolean bSorted = true;
     String sDirection = 'UNDEFINED';
 
@@ -28,3 +28,5 @@ public boolean isSorted(List<Integer> numbers) {
     }
    return bSorted; 
 }
+
+public enum EnumListDirection { UNDEFINED, UP, DOWN }
