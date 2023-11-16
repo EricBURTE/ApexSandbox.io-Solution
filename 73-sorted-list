@@ -28,4 +28,5 @@ public boolean isSorted(List<Integer> numbers) {
    return bSorted; 
 }
 
+//EBU : ENUM Declaration to codify the sorting direction of the list
 public enum EnumListDirection { UNDEFINED, UP, DOWN }
