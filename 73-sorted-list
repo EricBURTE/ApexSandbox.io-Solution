@@ -1,5 +1,5 @@
 public boolean isSorted(List<Integer> numbers) {
-    public enum EnumListDirection { Undefined, Upwards, Downwards };
+    
 
 
     Boolean bSorted=true,bUpwardTrend;
@@ -23,3 +23,5 @@ public boolean isSorted(List<Integer> numbers) {
     }
    return bSorted; 
 }
+
+public enum EnumListDirection { Undefined, Upwards, Downwards };
