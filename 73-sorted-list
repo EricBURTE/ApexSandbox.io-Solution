@@ -1,19 +1,19 @@
 public boolean isSorted(List<Integer> numbers) {
-    if(numbers.size() < 3) {
-        return true;
-    }
-
     String sDirection = '';
     Boolean bSorted=true;
+
+    if(numbers.size() < 3) {
+        return true;
+    } else {
+        sDirection = numbers[0] < numbers[1] ? 'ASC' : 'DESC';
+    }  
 
     for(Integer i = 0; i < numbers.size()-1 ; i++){
         if(numbers[i] < numbers[i+1] && sDirection =='DESC'){
             bSorted = false;
-            sDirection = sDirection == '' ? 'ASC' : sDirection;
         }
         if(numbers[i] > numbers[i+1] && sDirection =='ASC'){
             bSorted = false;
-            sDirection = sDirection == '' ? 'DESC' : sDirection;
         }
     }
    return bSorted; 
