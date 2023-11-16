@@ -1,5 +1,9 @@
 public boolean isSorted(List<Integer> numbers) {
-    Boolean bSorted=true, bUpwardTrend;
+    public enum EnumListDirection { Undefined, Upwards, Downwards };
+
+
+    Boolean bSorted=true,bUpwardTrend;
+    EnumListDirection trend = EnumListDirection.Undefined;
 
     if(numbers.size() < 3) {
         return true;
@@ -9,6 +13,7 @@ public boolean isSorted(List<Integer> numbers) {
     }  
 
     for(Integer i = 0; i < numbers.size()-1 ; i++){
+        if 
         if(numbers[i] < numbers[i+1] && !bUpwardTrend){
             bSorted = false;
         }
