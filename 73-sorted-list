@@ -3,17 +3,17 @@ public boolean isSorted(List<Integer> numbers) {
         return true;
     }
 
-    String sDirection = null;
+    String sDirection = '';
     Boolean bSorted=true;
 
     for(Integer i = 0; i < numbers.size()-1 ; i++){
         if(numbers[i] < numbers[i+1] && sDirection =='DESC'){
             bSorted = false;
-            sDirection = sDirection == null ? 'ASC' : sDirection;
+            sDirection = sDirection == '' ? 'ASC' : sDirection;
         }
         if(numbers[i] > numbers[i+1] && sDirection =='ASC'){
             bSorted = false;
-            sDirection = sDirection == null ? 'DESC' : sDirection;
+            sDirection = sDirection == '' ? 'DESC' : sDirection;
         }
     }
    return bSorted; 
