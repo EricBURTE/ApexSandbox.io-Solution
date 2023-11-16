@@ -1,5 +1,5 @@
 public Set<Integer> setIntersection(Set<Integer> set1, Set<Integer> set2) {
     Set<Integer> setIntersection = new Set<Integer> (set1);
-    setIntersection.retainsAll (set2);
+    setIntersection.retainAll (set2);
     return setIntersection;
 }
