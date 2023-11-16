@@ -3,10 +3,8 @@ public boolean isSorted(List<Integer> numbers) {
     Boolean bSorted = true;
     String sDirection = 'UNDEFINED';
 
-    //unnecessary
-    //if(numbers.size() < 3) {
-    //    return true;
-    //}
+    //shortens the execution by 2 loop iterations
+    if(numbers.size() < 3) { return true; }
 
     for(Integer i = 0; i < numbers.size()-1 ; i++){
  
