@@ -1,5 +1,6 @@
 public boolean isSorted(List<Integer> numbers) {
-    Boolean bSorted = true,
+    //public enum EnumListDirection { UNDEFINED, UP, DOWN }
+    Boolean bSorted = true;
     String sDirection = 'UNDEFINED';
 
     //unnecessary
@@ -18,7 +19,7 @@ public boolean isSorted(List<Integer> numbers) {
             }
             
         }
-        if(numbers[i] > numbers[i+1] && sDirection =='UP'){
+        else if(numbers[i] > numbers[i+1]){
             if (sDirection == 'UNDEFINED'){
                 sDirection = 'DOWN';
             }
