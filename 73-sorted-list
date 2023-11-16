@@ -9,9 +9,11 @@ public boolean isSorted(List<Integer> numbers) {
     for(Integer i = 0; i < numbers.size()-1 ; i++){
         if(numbers[i] < numbers[i+1] && sDirection =='DESC'){
             bSorted = false;
+            sDirection = sDirection == null ? 'ASC' : sDirection;
         }
         if(numbers[i] > numbers[i+1] && sDirection =='ASC'){
             bSorted = false;
+            sDirection = sDirection == null ? 'DESC' : sDirection;
         }
     }
    return bSorted; 
