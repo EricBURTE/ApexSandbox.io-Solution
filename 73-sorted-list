@@ -24,4 +24,4 @@ public boolean isSorted(List<Integer> numbers) {
    return bSorted; 
 }
 
-public enum EnumListDirection { Undefined, Upwards, Downwards };
+public enum EnumListDirection { Undefined, Upwards, Downwards }
