@@ -1,18 +1,18 @@
 public boolean isSorted(List<Integer> numbers) {
-    String sDirection = '';
-    Boolean bSorted=true;
+    Boolean bSorted=true, bUpwardTrend;
 
     if(numbers.size() < 3) {
         return true;
-    } else {
-        sDirection = numbers[0] < numbers[1] ? 'ASC' : 'DESC';
+    } 
+    else {
+        bUpwardTrend = numbers[0] < numbers[1] ? true : false;
     }  
 
     for(Integer i = 0; i < numbers.size()-1 ; i++){
-        if(numbers[i] < numbers[i+1] && sDirection =='DESC'){
+        if(numbers[i] < numbers[i+1] && !bIsGrowing){
             bSorted = false;
         }
-        if(numbers[i] > numbers[i+1] && sDirection =='ASC'){
+        if(numbers[i] > numbers[i+1] && bIsGrowing){
             bSorted = false;
         }
     }
