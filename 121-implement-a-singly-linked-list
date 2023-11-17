@@ -21,8 +21,7 @@ public class LinkedList{
     
     public void addToTail(Integer value){
         Node nLastNode = getLastNodePointer();
-        Node nNewNode = new Node(value);
-        nLastNode.next = nNewMode;
+        nLastNode.next = new Node(value);
         size++;
     }
     
