@@ -1,0 +1,86 @@
+public class LinkedList{
+    Integer size;
+    Node nFirstNode;
+
+    public void addToFront(Integer value){
+        Node nCurrentFirstNode = nFirstNode;
+        Node nNewFirstNode = new nFirstNode(value,nCurrentFirstNode)
+        nFirstNode = nNewFirstNode;
+        size++;
+    }
+    
+    public Integer removeFromFront(){
+        if (size>0) {
+            Integer iDateFromFirstNode = nFirstNode.data;
+            Node nSecondNode = nFirstNode.Node;
+            size--;
+            return iDateFromFirstNode;
+        }
+        else { return null ; }
+    }
+    
+    public void addToTail(Integer value){
+        Node nLastNode = getLastNodePointer();
+        Node nNewNode = new Node(value);
+        nLastNode.next = nNewMode;
+        size++;
+    }
+    
+    public Integer removeFromTail(){
+        Node nBeforeLastNode = getBeforeLastNodePointer();
+        Integer iDateFromLastNode = nBeforeLastNode.next.data;
+        nBeforeLastNode.next = null;
+        size--;
+        return iDateFromLastNode;
+    }
+ 
+    public Node getLastNodePointer(){
+        Integer iCounter = 1;    
+        if (size()>=1){
+            Node nCurrent = nFirstNode;
+            while (iCounter<=size() && Node.next!=null){
+                nCurrent = nCurrent.next;
+                iCounter++;
+            }
+            return nCurrent;
+        }
+    }
+
+    public Node getBeforeLastNodePointer(){
+        Integer iCounter = 1;
+        if (size()>=2){
+            Node nCurrent = nFirstNode;
+            Node nAfterCurrent = nFirstNode.next;
+            while (Node.nAfterCurrent!=null){
+                nCurrent = nAfterCurrent;
+                nAfterCurrent = nAfterCurrent.next;
+                iCounter++;
+            }
+            return nCurrent;
+        }
+        else { return null; }
+    }
+
+    public Integer size(){
+        return size;
+    }
+
+    public void LinkedList() {
+        size = 0;
+        nFirstNode = null;
+    }  
+}
+
+public class Node{
+    Integer data;
+    Node next;
+
+    public void Node(Integer iInput) {
+        data = iInput;
+        next = null;
+    }
+    public void Node(Integer iInput, Node nInput) {
+        data = iInput;
+        next = nInput;
+    }
+}
