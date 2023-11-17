@@ -10,9 +10,9 @@ public class LinkedList{
     }
     
     public Integer removeFromFront(){
-        if (size>0) {
+        if (size>1) {
             Integer iDateFromFirstNode = nFirstNode.data;
-            Node nSecondNode = nFirstNode.next;
+            nFirstNode = nFirstNode.next;
             size--;
             return iDateFromFirstNode;
         }
@@ -66,7 +66,7 @@ public class LinkedList{
     }
 
     public LinkedList() {
-        size = 0;
+        size = 1;
         nFirstNode = null;
     }  
 }
