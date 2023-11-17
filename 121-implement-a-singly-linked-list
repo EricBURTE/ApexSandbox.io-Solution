@@ -40,7 +40,7 @@ public class LinkedList{
  
     public Node getLastNodePointer(){
         Integer iCounter = 1;    
-        if (size()>1){
+        if (size()>=1){
             Node nCurrent = nFirstNode;
             while (iCounter<size() && nCurrent.next!=null){
                 nCurrent = nCurrent.next;
