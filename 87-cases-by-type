@@ -10,7 +10,7 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
         else {
             List<Case>> lCaseToAddForThisType = new List<Case>>();
             lCaseToAddForThisType.Add(c);
-            mapCasesByType.put(c.Type, lCaseForThisType);
+            mapCasesByType.put(c.Type, lCaseToAddForThisType);
         }
     }
     return mapCasesByType;
