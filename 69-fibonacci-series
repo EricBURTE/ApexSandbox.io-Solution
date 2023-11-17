@@ -2,7 +2,7 @@ public List<Integer> fibonacciSeries(Integer n) {
     List<Integer> lsFollowingFibonacciIntegers = new List<Integer> ();
     Integer iOneBefore, iTwoBefore, iCurrent;
 
-    for (Integer i=1 ; i<n ; i++){
+    for (Integer i=1 ; i<=n ; i++){
         if (n<=2) {
             lsFollowingFibonacciIntegers.Add(1);
             if (n==1) { iOneBefore = 1 ; }
