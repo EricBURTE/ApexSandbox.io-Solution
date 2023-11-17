@@ -1,12 +1,12 @@
 public List<Integer> fibonacciSeries(Integer n) {
-    List<Integer> lsFollowingFibonacciIntegers = new List<Integer> ();
+    List<Integer> lsFollowingFibonacciIntegers = new List<Integer>();
     Integer iOneBefore, iTwoBefore, iCurrent;
 
-    for (Integer i=1 ; i<=n ; i++){
-        if (n<=2) {
+    for (Integer i=1 ; i<=n ; i++) {
+        if (i<=2) {
             lsFollowingFibonacciIntegers.Add(1);
-            if (n==1) { iOneBefore = 1 ; }
-            if (n==2) { iTwoBefore = iOneBefore ;  iOneBefore = 1 ; }
+            if (i==1) { iOneBefore = 1 ; }
+            if (i==2) { iTwoBefore = iOneBefore ;  iOneBefore = 1 ; }
         }
         else {
             iCurrent = iOneBefore + iTwoBefore ; 
