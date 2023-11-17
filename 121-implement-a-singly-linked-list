@@ -26,11 +26,14 @@ public class LinkedList{
     }
     
     public Integer removeFromTail(){
-        Node nBeforeLastNode = getBeforeLastNodePointer();
-        Integer iDateFromLastNode = nBeforeLastNode.next.data;
-        nBeforeLastNode.next = null;
-        size--;
-        return iDateFromLastNode;
+        if (size>0) {
+            Node nBeforeLastNode = getBeforeLastNodePointer();
+            Integer iDateFromLastNode = nBeforeLastNode.next.data;
+            nBeforeLastNode.next = null;
+            size--;
+            return iDateFromLastNode;
+        }
+        else { return null; }
     }
  
     public Node getLastNodePointer(){
