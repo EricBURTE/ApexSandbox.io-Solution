@@ -4,7 +4,7 @@ public class LinkedList{
 
     public void addToFront(Integer value){
         Node nCurrentFirstNode = nFirstNode;
-        Node nNewFirstNode = new nFirstNode(value,nCurrentFirstNode);
+        Node nNewFirstNode = new Node (value,nCurrentFirstNode);
         nFirstNode = nNewFirstNode;
         size++;
     }
