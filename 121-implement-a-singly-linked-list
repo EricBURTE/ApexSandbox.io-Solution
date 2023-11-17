@@ -37,7 +37,7 @@ public class LinkedList{
         Integer iCounter = 1;    
         if (size()>=1){
             Node nCurrent = nFirstNode;
-            while (iCounter<=size() && Node.next!=null){
+            while (iCounter<=size() && nCurrent.next!=null){
                 nCurrent = nCurrent.next;
                 iCounter++;
             }
@@ -51,7 +51,7 @@ public class LinkedList{
         if (size()>=2){
             Node nCurrent = nFirstNode;
             Node nAfterCurrent = nFirstNode.next;
-            while (Node.nAfterCurrent!=null){
+            while (nAfterCurrent.next!=null){
                 nCurrent = nAfterCurrent;
                 nAfterCurrent = nAfterCurrent.next;
                 iCounter++;
