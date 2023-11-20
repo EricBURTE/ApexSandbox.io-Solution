@@ -1,0 +1,14 @@
+public void insertAtStart(String cityName, List<String> cities) {
+    if (cities.size()==0){
+        cities.add(cityName);
+    }
+    else {
+        String sReplaceFrom, sReplaceTo = cityName;
+        for (Integer i=0,i<cities.size();i++){
+            sReplaceFrom = cities[i] ;
+            cities[i] = sReplaceTo ;
+            sReplaceTo = sReplaceFrom ;
+        }
+        cities.add(sReplaceTo);
+    }
+}
