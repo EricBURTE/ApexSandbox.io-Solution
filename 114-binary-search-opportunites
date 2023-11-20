@@ -4,7 +4,7 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
     Integer iMiddle, iEcart;
     Boolean bDeadEnd = false;
     
-    while (iRight > iLeft && !bDeadEnd ) {
+    while (iRight >= iLeft && !bDeadEnd ) {
         iMiddle = Integer.ValueOf( ((iLeft + iRight + 2)/2)-1 );
         if (opportunities[iMiddle].Amount == target) {
             return iMiddle;
