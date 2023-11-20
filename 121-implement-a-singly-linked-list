@@ -58,7 +58,7 @@ public class LinkedList{
             Node nAfterCurrent = nFirstNode.next;
             while (nAfterCurrent.next!=null){
                 nCurrent = nAfterCurrent;
-                nAfterCurrent = nAfterCurrent.next;
+                nAfterCurrent = nCurrent.next;
                 iCounter++;
             }
             return nCurrent;
