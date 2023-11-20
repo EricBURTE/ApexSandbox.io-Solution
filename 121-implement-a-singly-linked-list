@@ -74,7 +74,7 @@ public class LinkedList{
     }
 
     public LinkedList() {
-        size = 0;
+        size = 1;
         nFirstNode = null;
     }  
 }
