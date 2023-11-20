@@ -53,7 +53,7 @@ public class LinkedList{
 
     public Node getBeforeLastNodePointer(){
         Integer iCounter = 1;
-        if (size()>2){
+        if (size()>3){
             Node nCurrent = nFirstNode;
             Node nAfterCurrent = nFirstNode.next;
             while (nAfterCurrent.next!=null && iCounter<size()){
@@ -62,7 +62,8 @@ public class LinkedList{
                 iCounter++;
             }
             return nCurrent;
-        }
+        } 
+        else if (size()==3) { return nFirstNode.next ; }
         else if (size()==2) { return nFirstNode ; }
         else { return null; }
     }
