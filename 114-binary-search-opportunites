@@ -4,13 +4,13 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
     Integer iMiddle;
     //boolean bFound = false;
 
-    while (iRight > iLeft &&  ) {
+    while (iRight > iLeft) {
         iMiddle = Integer.ValueOf( ((iLeft + iRight + 2)/2)-1 );
-        if (opportunities[iMiddle]==target) {
+        if (opportunities[iMiddle].Amount == target) {
             //bFound = true;
             return iMiddle;
         }
-        else if (opportunities[iMiddle] < target){
+        else if (opportunities[iMiddle].Amount < target){
             iLeft = iMiddle;
         }
         else {
