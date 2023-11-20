@@ -52,11 +52,11 @@ public class LinkedList{
     }
 
     public Node getBeforeLastNodePointer(){
-        Integer iCounter = 2;
-        if (size()>2){
+        Integer iCounter = 1;
+        if (size()>=2){
             Node nCurrent = nFirstNode;
             Node nAfterCurrent = nFirstNode.next;
-            while (nAfterCurrent.next!=null){
+            while (nAfterCurrent.next!=null && iCounter<size()-1){
                 nCurrent = nAfterCurrent;
                 nAfterCurrent = nCurrent.next;
                 iCounter++;
