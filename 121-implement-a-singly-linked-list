@@ -38,13 +38,11 @@ public class LinkedList{
         else { return null ; }
     }
  
-    public Node getLastNodePointer(){
-        Integer iCounter = 1;    
+    public Node getLastNodePointer(){  
         if (size()>=1){
             Node nCurrent = nFirstNode;
-            while (iCounter<size() && nCurrent.next!=null){
+            while (nCurrent.next!=null){
                 nCurrent = nCurrent.next;
-                iCounter++;
             }
             return nCurrent;
         }
