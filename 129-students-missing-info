@@ -1,0 +1,10 @@
+public List<apxio__Student__c> selectStudentsWithoutContactInfo() {
+    
+    List<apxio__Student__c> listStudentsWithMissingInfo = [ Select Id, Name, apxio__Active__c, apxio__Email__c, apxio__Phone__c, apxio__Registration_Number__c
+                                                            From apxio__Student__c 
+                                                            Where apxio__Active__c = true 
+                                                            and (apxio__Student__c.apxio__Email__c = null
+                                                                 or apxio__Student__c.apxio__Phone__c = null)
+                                                            Order by Name Asc];
+    return listStudentsWithMissingInfo;                                       
+}
