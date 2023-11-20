@@ -1,10 +1,10 @@
 public static Integer search(List<Opportunity> opportunities, Integer target){
     Integer iNbOppties = opportunities.size();
     Integer iLeft = 0, iRight = iNbOppties-1;
-    Integer iMiddle, iEcart;
+    Integer iMiddle, iEcart = iRight-iLeft+1;
     Boolean bDeadEnd = false;
     
-    while (iRight > iLeft && !bDeadEnd ) {
+    while (iEcart !=0 && !bDeadEnd ) {
         iMiddle = Integer.ValueOf( ((iLeft + iRight + 2)/2)-1 );
         if (opportunities[iMiddle].Amount == target) {
             return iMiddle;
