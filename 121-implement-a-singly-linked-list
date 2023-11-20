@@ -56,7 +56,7 @@ public class LinkedList{
         if (size()>2){
             Node nCurrent = nFirstNode;
             Node nAfterCurrent = nFirstNode.next;
-            while (nAfterCurrent.next!=null && iCounter<size()-1){
+            while (nAfterCurrent.next!=null && iCounter<size()){
                 nCurrent = nAfterCurrent;
                 nAfterCurrent = nCurrent.next;
                 iCounter++;
