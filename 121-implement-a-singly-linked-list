@@ -16,7 +16,7 @@ public class LinkedList{
             size--;
             return iDataFromFirstNode;
         }
-        else if (size()==1) { size--; return nFirstNode.data ; }
+        else if (size()==1) { size--; nFirstNode.next= null ; return nFirstNode.data ; }
         else { return null ; }
     }
     
@@ -34,7 +34,7 @@ public class LinkedList{
             size--;
             return iDataFromLastNode;
         }
-        else if (size()==1) { size--; return nFirstNode.data ; }
+        else if (size()==1) { size--; nFirstNode.next= null ; return nFirstNode.data ; }
         else { return null ; }
     }
  
