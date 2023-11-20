@@ -11,10 +11,10 @@ public class LinkedList{
     
     public Integer removeFromFront(){
         if (size()>1) {
-            Integer iDateFromFirstNode = nFirstNode.data;
+            Integer iDataFromFirstNode = nFirstNode.data;
             nFirstNode = nFirstNode.next;
             size--;
-            return iDateFromFirstNode;
+            return iDataFromFirstNode;
         }
         else if (size()==1) { size--; return nFirstNode.data ; }
         else { return null ; }
@@ -29,10 +29,10 @@ public class LinkedList{
     public Integer removeFromTail(){
         if (size()>1) {
             Node nBeforeLastNode = getBeforeLastNodePointer();
-            Integer iDateFromLastNode = nBeforeLastNode.next.data;
+            Integer iDataFromLastNode = nBeforeLastNode.next.data;
             nBeforeLastNode.next = null;
             size--;
-            return iDateFromLastNode;
+            return iDataFromLastNode;
         }
         else if (size()==1) { size--; return nFirstNode.data ; }
         else { return null ; }
@@ -52,7 +52,7 @@ public class LinkedList{
     }
 
     public Node getBeforeLastNodePointer(){
-        Integer iCounter = 1;
+        Integer iCounter = 2;
         if (size()>2){
             Node nCurrent = nFirstNode;
             Node nAfterCurrent = nFirstNode.next;
