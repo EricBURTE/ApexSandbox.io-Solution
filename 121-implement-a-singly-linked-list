@@ -66,6 +66,7 @@ public class LinkedList{
         else if (size()==4) { return nFirstNode.next.next ; }
         else if (size()==3) { return nFirstNode.next ; }
         else if (size()==2) { return nFirstNode ; }
+        else if (size()==1) { return nFirstNode ; }
         else { return null; }
     }
 
@@ -74,7 +75,7 @@ public class LinkedList{
     }
 
     public LinkedList() {
-        size = 1;
+        size = 0;
         nFirstNode = null;
     }  
 }
