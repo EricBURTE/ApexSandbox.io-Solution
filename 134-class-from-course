@@ -1,0 +1,12 @@
+public Id classFromCourse(String courseName) {
+    apxio__Course__c acCourse = [SELECT Id, Name from apxio__Course__c where Name = :courseName LIMIT 1];
+
+    if (acCourse==null){
+        return null;
+    }
+    else {
+        apxio__Class__c acClass = new apxio__Class__c (apxio__Course__c = acCourse.Id, Name = courseName);
+        return acClass.Id;
+    }
+
+}
