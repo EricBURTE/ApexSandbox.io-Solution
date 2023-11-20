@@ -11,11 +11,11 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
         }
         else if (opportunities[iMiddle].Amount < target){
             iLeft = iMiddle;
-            if (iRight - iLeft > iEcart) {iEcart = iRight - iLeft ;} else {bDeadEnd = true;}
+            if (iRight - iLeft > iEcart) {iEcart = iRight - iLeft + 1 ;} else {bDeadEnd = true;}
         }
         else {
             iRight = iMiddle;
-            if (iRight - iLeft > iEcart) {iEcart = iRight - iLeft ;} else {bDeadEnd = true;}
+            if (iRight - iLeft > iEcart) {iEcart = iRight - iLeft +1 ;} else {bDeadEnd = true;}
         }
         if (iLeft == iRight && opportunities[iMiddle].Amount == target){
             return iLeft;
