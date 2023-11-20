@@ -1,0 +1,21 @@
+public static Integer search(List<Opportunity> opportunities, Integer target){
+    Integer iNbOppties = opportunities.size();
+    Integer iLeft = 0, iRight = iNbOppties-1;
+    Integer iMiddle;
+    //boolean bFound = false;
+
+    while (iRight > iLeft &&  ) {
+        iMiddle = Integer.ValueOf( ((iLeft + iRight + 2)/2)-1 );
+        if (opportunities[iMiddle]==target) {
+            //bFound = true;
+            return iMiddle;
+        }
+        else if (opportunities[iMiddle] < target){
+            iLeft = iMiddle;
+        }
+        else {
+            iRight = iMiddle;
+        }
+    }
+    return -1;
+} 
