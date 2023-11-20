@@ -1,0 +1,7 @@
+public List<String> fullNames(List<String> firstNames, List<String> lastNames) {
+    List<String> lstFullNames = new list<String>();
+    for (Integer i=0; i<firstNames.size(); i++) {
+        lstFullNames.Add (firstNames[i]+' '+lastNames[i]);
+    }
+    return lstFullNames;
+}
