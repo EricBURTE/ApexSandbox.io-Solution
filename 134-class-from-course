@@ -1,10 +1,11 @@
 public Id classFromCourse(String courseName) {
-    apxio__Course__c acCourse = [SELECT Id, Name from apxio__Course__c where Name = :courseName LIMIT 1];
+    List<apxio__Course__c> lstCours = [SELECT Id, Name from apxio__Course__c where Name = :courseName];
 
-    if (acCourse==null){
+    if (lstCours.size()==0){
         return null;
     }
     else {
+        apxio__Course__c acCourse = lstCours.get[0];
         apxio__Class__c acClass = new apxio__Class__c (apxio__Course__c = acCourse.Id, Name = courseName);
         return acClass.Id;
     }
