@@ -5,7 +5,7 @@ public List<apxio__Student__c> selectActiveStudents() {
                                                 Where apxio__Active__c = true
                                                     and ID != null and Name<>''];
     For (apxio__Student__c st : listStudents) {
-        if (ID != null && Name!='') {
+        if (st.Id != null && st.Name!='') {
             listActiveStudents.Add(st);
         }
     }
