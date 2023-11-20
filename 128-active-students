@@ -1,8 +1,9 @@
 public List<apxio__Student__c> selectActiveStudents() {
     List<apxio__Student__c> listActiveStudents = new List<apxio__Student__c>();
-    List<apxio__Student__c> listStudents =  [ Select Id, Name, apxio__Registration_Number__c 
-                                            From apxio__Student__c 
-                                            Where apxio__Active__c = true ];
+    List<apxio__Student__c> listStudents =  [   Select Id, Name, apxio__Registration_Number__c 
+                                                From apxio__Student__c 
+                                                Where apxio__Active__c = true
+                                                    and ID != null and Name<>''];
     For (apxio__Student__c st : listStudents) {
         if (ID != null && Name!='') {
             listActiveStudents.Add(st);
