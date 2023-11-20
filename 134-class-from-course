@@ -5,7 +5,7 @@ public Id classFromCourse(String courseName) {
         return null;
     }
     else {
-        apxio__Course__c acCourse = lstCours.get[0];
+        apxio__Course__c acCourse = lstCours[0];
         apxio__Class__c acClass = new apxio__Class__c (apxio__Course__c = acCourse.Id, Name = courseName);
         return acClass.Id;
     }
