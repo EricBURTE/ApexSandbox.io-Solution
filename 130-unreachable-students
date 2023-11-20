@@ -1,17 +1,11 @@
 public List<apxio__Student__c> selectUnreachableStudents() {
-    List<apxio__Student__c> listUnreachableStudents = new List<apxio__Student__c>();
-    List<apxio__Student__c> listStudents =  [   Select Id, Name, apxio__Active__c, apxio__Email__c, apxio__Phone__c, apxio__Registration_Number__c
-                                                From apxio__Student__c 
-                                                Where apxio__Active__c = true 
-                                                    and apxio__Student__c.apxio__Email__c = null
-                                                    and apxio__Student__c.apxio__Phone__c = null
-                                                Order by Name Asc];
 
-    /*For (apxio__Student__c st : listStudents) {
-        if (st.Id != null && st.Name!='') {
-            listUnreachableStudents.Add(st);
-        }
-    }*/
-    return listStudents;                                       
+    List<apxio__Student__c> listUnreachableStudents = [ Select Id, Name, apxio__Active__c, apxio__Email__c, apxio__Phone__c, apxio__Registration_Number__c
+                                                        From apxio__Student__c 
+                                                        Where apxio__Active__c = true 
+                                                            and apxio__Student__c.apxio__Email__c = null
+                                                            and apxio__Student__c.apxio__Phone__c = null
+                                                        Order by Name Asc];
+    return listUnreachableStudents;                                       
 }
 
