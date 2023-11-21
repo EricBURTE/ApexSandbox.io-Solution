@@ -8,11 +8,10 @@ public static Integer longestDistinctSubstring(String str, Integer k){
         iCurrent = 0;
     
         while(     (i+iCurrent < str.length())
-                &&  iCurrent <= k ){
+                &&  iCurrent <= k ) {
             String sChar = str.substring(i+iCurrent, i+iCurrent+1);
-            if ( sCurrent.contains(sChar) {
+            if ( sCurrent.contains(sChar)) {
                 sCurrent += sChar;
-
             }
             else {
                 sCurrent += sChar;
