@@ -1,6 +1,6 @@
 public static Integer longestDistinctSubstring(String str, Integer k){ 
-    Int iCurrent=0;
-    Int lMax=0, lCurrent=0;
+    Integer iCurrent=0;
+    Integer lMax=0, lCurrent=0;
     String sMax, sCurrent;
 
     for (Integer i=0 ; i<str.length() ; i++){
