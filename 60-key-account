@@ -12,9 +12,9 @@ public Boolean isKeyAccount(Account a) {
         sIndustry = 'Others';
     }
     
-    if (a.AnnualRevenue > mapYearlyRevenueRef.get(sIndustry)) {
+    if (a.AnnualRevenue >= mapYearlyRevenueRef.get(sIndustry)) {
         return true;
     }
-    
+
     return bAboveReference;
 }
