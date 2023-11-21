@@ -9,12 +9,12 @@ public static Integer longestDistinctSubstring(String str, Integer k){
     
         while(     (i+iCurrent < str.length())
                 &&  iCurrent <= k ){
-            if ( sCurrent.contains(str.get(i+iCurrent) ) {
-                sCurrent += str.get(i+iCurrent);
+            if ( sCurrent.contains(str.substring(i+iCurrent, i+iCurrent+1)) {
+                sCurrent += str.substring(i+iCurrent, i+iCurrent+1);
 
             }
             else {
-                sCurrent += str.get(i+iCurrent);
+                sCurrent += str.substring(i+iCurrent, i+iCurrent+1);
                 lCurrent++;
             }
             iCurrent++;
