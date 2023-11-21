@@ -1,0 +1,20 @@
+public Boolean isKeyAccount(Account a) {
+    Boolean bAboveReference = false;
+    Map<String,Double> mapYearlyRevenueRef = new Map<String,Double> {
+                                                'Banking' => 600000,
+                                                'Technology' => 800000,
+                                                'Retail' => 2000000,
+                                                'Others' => 500000
+                                            };
+                    
+    String sIndustry = a.Industry;
+    if (sIndustry!='Banking' && sIndustry!='Technology' && sIndustry!='Retail'){
+        sIndustry = 'Others';
+    }
+    
+    if (a.AnnualRevenue > mapYearlyRevenueRef.get(sIndustry)) {
+        return true;
+    }
+    
+    return bAboveReference;
+}
