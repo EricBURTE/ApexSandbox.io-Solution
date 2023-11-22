@@ -11,7 +11,7 @@ public static Integer longestDistinctSubstring(String str, Integer k){
         bStillOk = true;
 
         Integer j = i;    
-        While (j<str.length()-i && iDifferentChar<=k && bStillOk) {
+        While (j<str.length() && iDifferentChar<=k && bStillOk) {
             String sChar = str.substring(j, j+1);
             if ( !sCurrent.contains(sChar)) {
                 if (iDifferentChar<k){
