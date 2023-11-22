@@ -19,12 +19,13 @@ public static Integer longestDistinctSubstring(String str, Integer k){
                 }
                 else {
                     bStillOk = false;
-                    break;
                 }
             } 
-            sCurrent += sChar;
-            lCurrent++;
-            j++;
+            if (bStillOk){
+                sCurrent += sChar;
+                lCurrent++;
+                j++;
+            }
         }
 
         if (lCurrent>lMax) {lMax = lCurrent ; sMax = sCurrent ;}
