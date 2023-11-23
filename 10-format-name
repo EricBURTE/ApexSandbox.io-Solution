@@ -9,4 +9,5 @@ public String formatName(String firstName, String lastName) {
     if (!String.IsBlank(firstName)) {
         sName += firstName;
     }
+    return sName;
 }
