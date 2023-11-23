@@ -1,9 +1,9 @@
 public String formatName(String firstName, String lastName) {
     String sName = '';
-    if (!String.IsBlank(firstName)) {
+    if (!String.IsBlank(lastName)) {
         sName += lastName;
     }
-    if (!String.IsBlank(firstName) && !String.IsBlank(firstname)){
+    if (!String.IsBlank(lastName) && !String.IsBlank(firstname)){
         sName += ', ';
     }
     if (!String.IsBlank(firstName)) {
