@@ -1,0 +1,16 @@
+public Boolean isPrime(Integer num) {
+    Boolean bPremier = true;
+    Integer iToBeTestedDivisor=2
+    while (iToBeTestedDivisor<num && bPremier) {
+        if (isDivisibleBy(num,iToBeTestedDivisor)) { bPremier=false; }
+        iToBeTestedDivisor++;
+    }
+}
+
+public Boolean isDivisibleBy(Integer iNumber, Integer quotientNumber) {
+    if (Math.Mod(iNumber,quotientNumber)==0){
+        return true;
+    } else {
+        return false;
+    }
+}
