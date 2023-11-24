@@ -5,6 +5,7 @@ public Boolean isPrime(Integer num) {
         if (isDivisibleBy(num,iToBeTestedDivisor)) { bPremier=false; }
         iToBeTestedDivisor++;
     }
+    return bPremier;
 }
 
 public Boolean isDivisibleBy(Integer iNumber, Integer quotientNumber) {
