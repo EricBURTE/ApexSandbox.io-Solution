@@ -1,14 +1,15 @@
 public Boolean companionPlants(List<String> plants) {
     Boolean bCompanionsOnly = true;
-    Map<String,List<String>> mapCompanions = new Map<String,List<String>> mapCompanions (
-        'lettuce' => new list<String>('cucumber','onions'),
-        'cucumber' => new list<String>('lettuce'),
-        'onions' => new list<String>('lettuce', 'carrots', 'tomatoes'),
-        'carrots' => new list<String>('onions')
-    );
+    Map<String,List<String>> mapCompanions = new Map<String,List<String>> mapCompanions {
+        'lettuce'   => new list<String> {'cucumber','onions'},
+        'cucumber'  => new list<String> {'lettuce'},
+        'onions'    => new list<String> {'lettuce', 'carrots', 'tomatoes'},
+        'carrots'   => new list<String> {'onions'},
+        'tomatoes'  => new list<String> {'onions'}
+    };
 
     for (Integer i = 0 ; i< plants.size()-1 ; i++) {
-        if (!mapCompanions.get(plants[map[i]).contains(map[i+1])) {
+        if (!mapCompanions.get(plants[i]).contains(plants[i+1])) {
             bCompanionsOnly = false ;
         }
     }
