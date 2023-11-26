@@ -6,7 +6,7 @@ public Integer secondLargest(List<Integer> numbers) {
         }
     }
     for (Integer j : numbers) {
-        if (j>iSecondBest and j!= iMaximum) {
+        if (j>iSecondBest && j!=iMaximum) {
             iSecondBest = j;
         }
     }
