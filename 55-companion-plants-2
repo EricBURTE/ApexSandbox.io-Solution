@@ -4,8 +4,8 @@ public Boolean companionPlants(List<String> plants) {
     if (plants.size()==1){ return false; }    
 
     Map<String,List<String>> mapCompanions = new Map<String,List<String>> {
-        'lettuce'   => new list<String> {'cucumber','onions'},
-        'cucumber'  => new list<String> {'lettuce'},
+        'lettuce'   => new list<String> {'cucumbers','onions'},
+        'cucumbers' => new list<String> {'lettuce'},
         'onions'    => new list<String> {'lettuce', 'carrots', 'tomatoes'},
         'carrots'   => new list<String> {'onions'},
         'tomatoes'  => new list<String> {'onions'}
