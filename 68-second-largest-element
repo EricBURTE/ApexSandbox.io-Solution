@@ -1,5 +1,5 @@
 public Integer secondLargest(List<Integer> numbers) {
-    Integer iMaximum = -999999, iSecondBest=-999999;
+    Integer iMaximum = -2147483647, iSecondBest=-2147483647;
     for (Integer i : numbers) {
         if (i>iMaximum) {
             iMaximum = i;
