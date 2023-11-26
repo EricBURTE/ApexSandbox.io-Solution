@@ -1,0 +1,14 @@
+public Integer secondLargest(List<Integer> numbers) {
+    Integer iMaximum = -999999, iSecondBest=-999999;
+    for (Integer i : numbers) {
+        if (i>iMaximum) {
+            iMaximum = i;
+        }
+    }
+    for (Integer j : numbers) {
+        if (j>iSecondBest and j!= iMaximum) {
+            iSecondBest = j;
+        }
+    }
+    return j;
+}
