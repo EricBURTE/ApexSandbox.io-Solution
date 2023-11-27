@@ -1,0 +1,15 @@
+public Integer maxConsecutiveOnes(Integer[] numbers) {
+    Integer iCurrent=0, iMax=0;
+    for (integer i=0 ; i<numbers.size() ; i++) {
+        if(numbers[i]==1){
+            iCurrent++;
+        } 
+        else {
+            if (iCurrent>iMax) { iMax = iCurrent; iCurrent=0; }
+        }
+
+    }
+
+    if (iCurrent>iMax) { iMax = iCurrent ; }
+    return iMax;
+}
