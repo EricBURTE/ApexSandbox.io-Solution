@@ -1,5 +1,5 @@
 public List<Account> getAccounts(List<Account> accounts) {
-    accounts.sort();
+    accounts?.sort();
     return accounts;
 }
 // write extra class here 
