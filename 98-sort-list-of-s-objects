@@ -1,0 +1,22 @@
+public List<Account> getAccounts(List<Account> accounts) {
+    accounts.sort(new AccountWrapper());
+    return accounts;
+}
+// write extra class here 
+public class AccountWrapper implements Comparable {
+    public Account accountReference;
+    public AccountWrapper (Account acc) {
+        accountReference = acc;
+    }
+    public Integer CompareTo (Account accountToCompare){
+        if (accountReference.AnnualRevenue == accountToCompare.AnnualRevenue){
+            return 0;
+        }
+        else if (accountReference.AnnualRevenue < accountToCompare.AnnualRevenue) {
+            return -1;
+        }
+        else {
+            return 1;
+        }
+    }
+}
