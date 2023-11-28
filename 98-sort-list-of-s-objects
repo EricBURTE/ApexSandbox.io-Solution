@@ -8,11 +8,12 @@ public class AccountWrapper implements Comparable {
     public AccountWrapper (Account acc) {
         accountReference = acc;
     }
-    public Integer CompareTo (Account accountToCompare){
-        if (accountReference.AnnualRevenue == accountToCompare.AnnualRevenue){
+    public Integer CompareTo (Object objetToCompare){
+        AccountWrapper accountToCompare = (AccountWrapper) objetToCompare;
+        if (accountReference.AnnualRevenue == accountToCompare.accountReference.AnnualRevenue){
             return 0;
         }
-        else if (accountReference.AnnualRevenue < accountToCompare.AnnualRevenue) {
+        else if (accountReference.AnnualRevenue < accountToCompare.accountReference.AnnualRevenue) {
             return -1;
         }
         else {
