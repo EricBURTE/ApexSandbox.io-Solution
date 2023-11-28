@@ -1,6 +1,6 @@
 public List<Account> checkAccounts(List<Account> accounts)
 {
-    if (accounts == null) { throw new IllegalArgumentException(); }
+    if (accounts == null) { throw new IllegalArgumentException('accounts should not be null'); }
 
     Boolean bAtLeastOneAccountWithoutBillingCity = false;
     for (Account acc : accounts) {
@@ -8,10 +8,10 @@ public List<Account> checkAccounts(List<Account> accounts)
             bAtLeastOneAccountWithoutBillingCity = true;
         }
     }
-    
-    if (bAtLeastOneAccountWithoutBillingCity) {throw new AccountException(); }
+
+    if (bAtLeastOneAccountWithoutBillingCity) {throw new AccountException('Invalid BillingCity'); }
     else { return accounts ; }
 }
 
 //do not remove the following custom-defined exception
-public class AccountException extends Exception {}
+public class AccountException extends Exception {}}
