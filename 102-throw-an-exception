@@ -1,0 +1,17 @@
+public List<Account> checkAccounts(List<Account> accounts)
+{
+    if (accounts == null) { throw new IllegalArgumentException(); }
+
+    Boolean bAtLeastOneAccountWithoutBillingCity = false;
+    for (Account acc : accounts) {
+        if (acc.billingCity == null) {
+            bAtLeastOneAccountWithoutBillingCity = true;
+        }
+    }
+    
+    if (bAtLeastOneAccountWithoutBillingCity) {throw new AccountException(); }
+    else { return accounts ; }
+}
+
+//do not remove the following custom-defined exception
+public class AccountException extends Exception {}
