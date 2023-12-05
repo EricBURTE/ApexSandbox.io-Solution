@@ -1,13 +1,13 @@
 public String reverseWordsInASentence(String sentence){
     List<String> sWordsFromSentence = sentence?.split(' ');
-    String sReversedSentence=null; 
+    String sReversedSentence; 
     // if (sentence == null) {return sentence ;}
-    
+
     for (Integer i = sWordsFromSentence?.size()-1 ; i>=0; i--) {
         if (i<sWordsFromSentence.size()-1) {
-            sReversedSentence += ' ';
+            sReversedSentence += ' ' ;
         } else {
-            sReversedSentence=''
+            sReversedSentence = '' ;
         }
 
         sReversedSentence += sWordsFromSentence.get(i);
