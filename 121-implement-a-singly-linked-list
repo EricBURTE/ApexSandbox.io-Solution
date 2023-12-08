@@ -3,17 +3,10 @@ public class LinkedList{
     Node nFirstNode;
 
     public void addToFront(Integer value){
-        /*if (size()==0) {
-            nFirstNode.data = value;
-            nFirstNode.next = null;
-            size = 1;
-        }
-        else {*/
-            Node nCurrentFirstNode = nFirstNode;
-            Node nNewFirstNode = new Node (value,nCurrentFirstNode);
-            nFirstNode = nNewFirstNode;
-            size++;
-        //}
+        Node nCurrentFirstNode = nFirstNode;
+        Node nNewFirstNode = new Node (value,nCurrentFirstNode);
+        nFirstNode = nNewFirstNode;
+        size++;
     }
     
     public Integer removeFromFront(){
@@ -28,16 +21,9 @@ public class LinkedList{
     }
     
     public void addToTail(Integer value){
-        /*if (size()==0) {
-            nFirstNode.data = value;
-            nFirstNode.next = null;
-            size = 1;
-        }
-        else {*/
-            Node nLastNode = getLastNodePointer();
-            nLastNode.next = new Node(value);
-            size++;
-        //}
+        Node nLastNode = getLastNodePointer();
+        nLastNode.next = new Node(value);
+        size++;
     }
     
     public Integer removeFromTail(){
