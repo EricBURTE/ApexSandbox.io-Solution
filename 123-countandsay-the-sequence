@@ -3,7 +3,7 @@ public string countAndSay(integer N) {
         return '1';
     }
     else {
-        String sPrevious = say(countAndSay(N-1));
+        return say(countAndSay(N-1));
     }
 }
 
