@@ -1,18 +1,18 @@
 public List<Integer> twoSum(List<Integer> nums, Integer target){
-    Integer index = 0;
-    Boolean bFound = false;
+    Integer indexLeft = 0, indexRight = nums.size()-1;
     List<Integer> lstIndexResult = new List<Integer>();
-    
-    while (index < nums.size() && !bFound) {
-        Integer iCurrent = nums.get(index);
-        Integer iComplement = target-iCurrent;
-        if (nums.contains(iComplement)) {
-            lstIndexResult.add(index);
-            lstIndexResult.add(nums.indexof(iComplement));
+    Boolean bFound = false;
+
+    while (indexLeft < indexRight && !bFound) {
+        Integer iLeft = nums.get(indexLeft);
+        Integer iRight = nums.get(indexRight);
+        if (iLeft+iRight == target) {
+            lstIndexResult.add(indexLeft);
+            lstIndexResult.add(indexRight);
             bFound = true;
         }
-        index++;
+        else if (iLeft+iRight > target) { indexRight--; }
+        else { indexLeft++; }
     }
-
     return lstIndexResult ;
 }
