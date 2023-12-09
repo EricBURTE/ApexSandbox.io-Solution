@@ -1,0 +1,36 @@
+public string countAndSay(integer N) {
+    if (N==1) {
+        return '1';
+    }
+    else {
+        String sPrevious = say(countAndSay(N-1));
+    }
+}
+
+public string say(String sN) {
+    String[] tabStringInput = sN.split('');
+    String sSentenceSaid ='';
+    Integer indexStart=0, indexEnd=0;
+    Boolean bFini = false
+
+    while( indexStart<tabStringInput.size() && !bFini ){
+        String sDigit = tabStringInput[indexStart];
+        Integer cpt = 1;
+        Boolean bContinue = true;
+
+        while ( indexEnd<tabStringInput.size() && bContinue ){
+            if(tabStringInput[indexEnd] == sDigit) {
+                cpt++;
+                indexEnd++;
+            }
+            else {
+                bContinue = false;
+            }
+        }
+        sSentenceSaid += String.valueOf(cpt) + sDigit;
+        indexStart=indexEnd+1;
+        bFini = indexStart>=sN.size();
+
+    }
+    return sSentenceSaid ;
+}
