@@ -1,5 +1,5 @@
 public List<Integer> twoSum(List<Integer> nums, Integer target){
-    Integer index = 0
+    Integer index = 0;
     Boolean bFound = false;
     List<Integer> lstIndexResult = new List<Integer>();
     
