@@ -3,11 +3,11 @@ public string countAndSay(integer N) {
         return '1';
     }
     else {
-        return say(countAndSay(N-1));
+        return writeDown(countAndSay(N-1));
     }
 }
 
-public string say(String sN) {
+public String writeDown(String sN) {
     String[] tabStringInput = sN.split('');
     String sSentenceSaid ='';
     Integer indexStart=0, indexEnd=0;
