@@ -11,7 +11,7 @@ public String writeDown(String sN) {
     String[] tabStringInput = sN.split('');
     String sSentenceSaid ='';
     Integer indexStart=0, indexEnd=0;
-    Boolean bFini = false
+    Boolean bFini = false;
 
     while( indexStart<tabStringInput.size() && !bFini ){
         String sDigit = tabStringInput[indexStart];
