@@ -1,8 +1,8 @@
 public List<Account> getAccountsFromJSONString(String inputJSON){
     if (inputJSON == '' || inputJSON == null ) {
-        return null
+        return null;
     }
     else {
-            return (List<Account>)JSON.Deserialize(inputJSON, List<Account>.class);        
+        return (List<Account>)JSON.Deserialize(inputJSON, List<Account>.class);        
     }
 }
