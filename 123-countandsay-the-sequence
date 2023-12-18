@@ -21,7 +21,7 @@ public String writeDown(String sN) {
         indexEnd=indexStart;
 
         while ( indexEnd<tabStringInput.length() && bContinue ){
-            if(tabStringInput.indexStart(indexEnd,indexEnd+1) == sDigit) {
+            if(tabStringInput.substring(indexEnd,indexEnd+1) == sDigit) {
                 cpt++;
                 indexEnd++;
             }
