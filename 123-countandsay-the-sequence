@@ -8,7 +8,7 @@ public string countAndSay(integer N) {
 }
 
 public String writeDown(String sN) {
-    String[] tabStringInput = sN.split('\\.');
+    String[] tabStringInput = sN.split('*');
     String sSentenceSaid ='';
     Integer indexStart=0, indexEnd=0;
     Boolean bFini = false;
