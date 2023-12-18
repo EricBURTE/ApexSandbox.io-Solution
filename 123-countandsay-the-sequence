@@ -30,7 +30,7 @@ public String writeDown(String sN) {
         }
         sSentenceSaid += String.valueOf(cpt) + sDigit;
         indexStart=indexEnd+1;
-        bFini = indexStart>=sN.length();
+        bFini = indexStart>=tabStringInput.size();
 
     }
     return sSentenceSaid ;
