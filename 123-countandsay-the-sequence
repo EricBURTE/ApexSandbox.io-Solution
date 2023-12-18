@@ -14,13 +14,13 @@ public String writeDown(String sN) {
     Integer indexStart=0, indexEnd=0;
     Boolean bFini = false;
 
-    while( indexStart<tabStringInput.size() && !bFini ){
+    while( indexStart<tabStringInput.length() && !bFini ){
         String sDigit = tabStringInput[indexStart];
         Integer cpt = 0;
         Boolean bContinue = true;
         indexEnd=indexStart;
 
-        while ( indexEnd<tabStringInput.size() && bContinue ){
+        while ( indexEnd<tabStringInput.length() && bContinue ){
             if(tabStringInput[indexEnd] == sDigit) {
                 cpt++;
                 indexEnd++;
@@ -31,7 +31,7 @@ public String writeDown(String sN) {
         }
         sSentenceSaid += String.valueOf(cpt) + sDigit;
         indexStart=indexEnd+1;
-        bFini = indexStart>=tabStringInput.size();
+        bFini = indexStart>=tabStringInput.length();
 
     }
     return sSentenceSaid ;
