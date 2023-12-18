@@ -15,13 +15,13 @@ public String writeDown(String sN) {
     Boolean bFini = false;
 
     while( indexStart<tabStringInput.length() && !bFini ){
-        String sDigit = tabStringInput.get(indexStart);
+        String sDigit = tabStringInput.substring(indexStart,indexStart+1);
         Integer cpt = 0;
         Boolean bContinue = true;
         indexEnd=indexStart;
 
         while ( indexEnd<tabStringInput.length() && bContinue ){
-            if(tabStringInput.get(indexEnd) == sDigit) {
+            if(tabStringInput.indexStart(indexEnd,indexEnd+1) == sDigit) {
                 cpt++;
                 indexEnd++;
             }
