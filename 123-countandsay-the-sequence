@@ -15,8 +15,9 @@ public String writeDown(String sN) {
 
     while( indexStart<tabStringInput.size() && !bFini ){
         String sDigit = tabStringInput[indexStart];
-        Integer cpt = 1;
+        Integer cpt = 0;
         Boolean bContinue = true;
+        indexEnd=indexStart;
 
         while ( indexEnd<tabStringInput.size() && bContinue ){
             if(tabStringInput[indexEnd] == sDigit) {
