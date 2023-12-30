@@ -1,7 +1,7 @@
 public Boolean isPalindrome(String str){
     List<String> lsAllLetters = new List<String>();
 
-    for (String sEachLetter : str.toLowerCase().split('')){
+    for (String sEachLetter : str.toLowerCase().split('')) {
         if (sEachLetter.isAlphanumeric()) {
                lsAllLetters.add(sEachLetter);
         }
