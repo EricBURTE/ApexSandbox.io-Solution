@@ -1,24 +1,20 @@
 public Boolean isPalindrome(String str){
-    List<String> letters = new List<String>();
+    List<String> lsAllLetters = new List<String>();
 
     for (String c : str.toLowerCase().split('')){
         if (c.isAlphanumeric()) {
-               letters.add(c);
+               lsAllLetters.add(c);
         }
     }
 
-    Integer i = 0;
-    Integer j = letters.size()-1;
+    Integer i=0, j=lsAllLetters.size()-1;
+    Boolean bPalindrom = true;
 
-    while ( (i <= j) && (letters[i] == letters[j])) {
-        i++;
-        j--;
+    while ( i<=j && bPalindrom) {
+        if (lsAllLetters[i] != lsAllLetters[j]) {
+            bPalindrom = false;
+        }
+        else {i++; j--; }
     }
-
-    if (i > j) {
-        return true;
-    }
-    else {
-        return false;
-    }
+    return bPalindrom;
 }
