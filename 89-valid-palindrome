@@ -10,11 +10,11 @@ public Boolean isPalindrome(String str){
     Integer i=0, j=lsAllLetters.size()-1;
     Boolean bPalindrom = true;
 
-    while ( i<=j && bPalindrom) {
+    while ( i<j && bPalindrom) {
         if (lsAllLetters[i] != lsAllLetters[j]) {
             bPalindrom = false;
         }
-        else {i++; j--; }
+        else {i++; j--;}
     }
     return bPalindrom;
 }
