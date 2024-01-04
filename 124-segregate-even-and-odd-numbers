@@ -1,0 +1,30 @@
+public static void segregateEvenOdd(List<Integer> numbers){
+    Integer indexLeft = 0, indexRight = numbers.size()-1;
+    //Boolean bFound = false;
+
+    while (indexLeft < indexRight) {
+        Integer iLeft = nums.get(indexLeft);
+        Integer iRight = nums.get(indexRight);
+        if (iLeft+iRight == target) {
+            lstIndexResult.add(indexLeft);
+            lstIndexResult.add(indexRight);
+            bFound = true;
+        }
+        else if (iLeft+iRight > target) { indexRight--; }
+        else { indexLeft++; }
+    }
+
+    while (indexLeft < indexRight) {
+        Integer iLeft = nums.get(indexLeft);
+        Integer iRight = nums.get(indexRight);
+        if (iLeft+iRight == target) {
+            lstIndexResult.add(indexLeft);
+            lstIndexResult.add(indexRight);
+            bFound = true;
+        }
+        else if (iLeft+iRight > target) { indexRight--; }
+        else { indexLeft++; }
+    }
+
+    return lstIndexResult ;
+}
