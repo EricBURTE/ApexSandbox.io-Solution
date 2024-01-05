@@ -23,10 +23,9 @@ public static void segregateEvenOdd(List<Integer> numbers){
         if (!bOkforLeft && !bOkforRight) {
             swapIntergerInList(numbers,indexLeft,indexRight);
         }
-        else{
-            bOKforLeft = true;
-            bOkforRight = true;
-        }
+        
+        bOKforLeft = true;
+        bOkforRight = true;
     }
 }
 
