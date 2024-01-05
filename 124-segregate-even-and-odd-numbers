@@ -24,7 +24,7 @@ public static void segregateEvenOdd(List<Integer> numbers){
              swapIntergerInList(numbers,indexLeft,indexRight); 
         }
     }
-    return lstIndexResult ;
+    return numbers ;
 }
 
 public static boolean isEven (Integer iInput){
