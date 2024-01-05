@@ -35,7 +35,7 @@ public static boolean isOdd (Integer iInput){
     return !isEven(iInput);
 } 
 
-public static swapIntergerInList (List<Integer> lstInput, Integer iIndex1, Integer iIndex2){
+public static void swapIntergerInList (List<Integer> lstInput, Integer iIndex1, Integer iIndex2){
     Integer iSwap1 = lstInput.get(iIndex1);
     Integer iSwap2 = lstInput.get(iIndex2);
     lstInput.set(iIndex1,iSwap2);
