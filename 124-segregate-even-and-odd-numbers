@@ -1,30 +1,43 @@
 public static void segregateEvenOdd(List<Integer> numbers){
     Integer indexLeft = 0, indexRight = numbers.size()-1;
+    boolean bOKforLeft = true, bOkforRight = true;
     //Boolean bFound = false;
 
     while (indexLeft < indexRight) {
-        Integer iLeft = nums.get(indexLeft);
-        Integer iRight = nums.get(indexRight);
-        if (iLeft+iRight == target) {
-            lstIndexResult.add(indexLeft);
-            lstIndexResult.add(indexRight);
-            bFound = true;
+        while(bOkforLeft && indexLeft<indexRight ){
+            Integer iLeft = numbers.get(indexLeft);
+            if (isEven(iLeft)) {
+                indexLeft++;
+            }
+            else {bOkforLeft = false;}
         }
-        else if (iLeft+iRight > target) { indexRight--; }
-        else { indexLeft++; }
-    }
 
-    while (indexLeft < indexRight) {
-        Integer iLeft = nums.get(indexLeft);
-        Integer iRight = nums.get(indexRight);
-        if (iLeft+iRight == target) {
-            lstIndexResult.add(indexLeft);
-            lstIndexResult.add(indexRight);
-            bFound = true;
+        while(bOkforRight && indexLeft<indexRight ){
+            Integer iRight = numbers.get(indexRight);
+            if (isOdd(iRight)) {
+                indexRight--;
+            }
+            else {bOkforRight = false;}
         }
-        else if (iLeft+iRight > target) { indexRight--; }
-        else { indexLeft++; }
+       
+        if (!bOkforLeft && !bOkforRight) {
+             swapIntergerInList(numbers,indexLeft,indexRight); 
+        }
     }
-
     return lstIndexResult ;
 }
+
+public static boolean isEven (Integer iInput){
+    return (Math.Mod(iInput,2) == 0);
+} 
+
+public static boolean isOdd (Integer iInput){
+    return !isEven(iInput);
+} 
+
+public static swapIntergerInList (List<Integer> lstInput, Integer iIndex1, Integer iIndex2){
+    Integer iSwap1 = lstInput.get(iIndex1);
+    Integer iSwap2 = lstInput.get(iIndex2);
+    lstInput.set(iIndex1,iSwap2);
+    lstInput.set(iIndex2,iSwap1);
+} 
