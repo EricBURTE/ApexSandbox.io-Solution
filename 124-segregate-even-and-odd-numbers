@@ -3,7 +3,7 @@ public static void segregateEvenOdd(List<Integer> numbers){
     boolean bOKforLeft = true, bOkforRight = true;
     //Boolean bFound = false;
 
-    while (indexLeft < indexRight) {
+    while (indexLeft <= indexRight) {
         while(bOkforLeft && indexLeft<indexRight ){
             Integer iLeft = numbers.get(indexLeft);
             if (isEven(iLeft)) {
@@ -21,7 +21,7 @@ public static void segregateEvenOdd(List<Integer> numbers){
         }
        
         if (!bOkforLeft && !bOkforRight) {
-            swapIntergerInList(numbers,indexLeft,indexRight); 
+            swapIntergerInList(numbers,indexLeft,indexRight);
         }
     }
 }
