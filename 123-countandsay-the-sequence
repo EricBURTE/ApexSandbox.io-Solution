@@ -31,7 +31,7 @@ public String writeDown(String sN) {
         }
         sSentenceSaid += String.valueOf(cpt) + sDigit;
         indexStart=indexEnd+1;
-        bFini = indexStart>=tabStringInput.length();
+        bFini = indexStart>tabStringInput.length();
 
     }
     return sSentenceSaid ;
