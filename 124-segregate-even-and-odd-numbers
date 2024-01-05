@@ -1,31 +1,25 @@
 public static void segregateEvenOdd(List<Integer> numbers){
     Integer indexLeft = 0, indexRight = numbers.size()-1;
     boolean bOKforLeft = true, bOkforRight = true;
-    //Boolean bFound = false;
 
     while (indexLeft < indexRight) {
         while(bOkforLeft && indexLeft<indexRight ){
             Integer iLeft = numbers.get(indexLeft);
-            if (isEven(iLeft)) {
-                indexLeft++;
-            }
+            if (isEven(iLeft)) { indexLeft++; }
             else {bOkforLeft = false;}
         }
 
         while(bOkforRight && indexLeft<indexRight ){
             Integer iRight = numbers.get(indexRight);
-            if (isOdd(iRight)) {
-                indexRight--;
-            }
+            if (isOdd(iRight)) { indexRight--; }
             else {bOkforRight = false;}
         }
        
         if (!bOkforLeft && !bOkforRight) {
             swapIntergerInList(numbers,indexLeft,indexRight);
         }
-        
-        bOKforLeft = true;
-        bOkforRight = true;
+
+        bOKforLeft = true; bOkforRight = true;
     }
 }
 
@@ -38,8 +32,7 @@ public static boolean isOdd (Integer iInput){
 } 
 
 public static void swapIntergerInList (List<Integer> lstInput, Integer iIndex1, Integer iIndex2){
-    Integer iSwap1 = lstInput.get(iIndex1);
-    Integer iSwap2 = lstInput.get(iIndex2);
-    lstInput.set(iIndex1,iSwap2);
-    lstInput.set(iIndex2,iSwap1);
+    Integer iSwapTempVar = lstInput.get(iIndex1);
+    lstInput.set(iIndex1,lstInput.get(iIndex2));
+    lstInput.set(iIndex2,iSwapTempVar);
 } 
