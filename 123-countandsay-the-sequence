@@ -14,7 +14,7 @@ public String writeDown(String sN) {
     Integer indexStart=0, indexEnd=0;
     Boolean bFini = false;
 
-    while( indexStart<=tabStringInput.length() ){
+    while( indexStart<tabStringInput.length() ){
         String sDigit = tabStringInput.substring(indexStart,indexStart+1);
         Integer cpt = 0;
         Boolean bContinue = true;
