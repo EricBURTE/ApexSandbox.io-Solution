@@ -1,8 +1,9 @@
 public void defragging(Integer[] memory) {
-    Integer i = 0;
-    for(Integer j = 0; j < memory.size(); j++) {
-        if(memory[i] == -1) //add it to end of list, then delete the element
-            memory.add(memory.remove(i--));
-        i++;
+    Integer index = 0; 
+    while (index < memory.size()) {
+        if(memory[index] == -1) {
+            memory.add(memory.remove(index));
+        }
+        else { index++ ;}
     }
 }
