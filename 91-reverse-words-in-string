@@ -3,8 +3,7 @@ public static String reverseWords(String str){
     list<String> lstWords = str.split(' ');
     String sReversedSentence = '';
     for (Integer i=0, i<str.size(), i++) {
-        sReversedSentence += lstWord[i].reverse();
-        if (i<str.size()-1) {sReversedSentence += ' ';}
+        
     }
     return sReversedSentence;
 }
