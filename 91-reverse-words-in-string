@@ -1,0 +1,9 @@
+public static String reverseWords(String str){
+    list<string> lstWords = str.split(' ');
+    String sReversedSentence ='';
+    for (integer i=0, i<str.size(), i++) {
+        sReversedSentence += lstWord[i].reverse();
+        if (i<str.size()-1) {sReversedSentence += ' ';}
+    }
+    return sReversedSentence;
+}
