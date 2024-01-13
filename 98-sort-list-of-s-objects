@@ -13,7 +13,7 @@ public class AccountWrapper implements Comparable {
         if (accountReference.AnnualRevenue == accountToCompare.accountReference.AnnualRevenue){
             return 0;
         }
-        else if (accountReference.AnnualRevenue < accountToCompare.accountReference.AnnualRevenue) {
+        else if (accountReference.AnnualRevenue > accountToCompare.accountReference.AnnualRevenue) {
             return -1;
         }
         else {
