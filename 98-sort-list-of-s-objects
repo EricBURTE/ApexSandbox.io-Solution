@@ -1,13 +1,14 @@
 public List<Account> getAccounts(List<Account> accounts) {
+    if (accounts == null) { return null ;}
     List<AccountWrapper> lstComparableSorted = new List<AccountWrapper>();
     for (Account aIndex : accounts) {
         lstComparableSorted.add(new AccountWrapper(aIndex));
     }
-    lstComparableSorted?.sort();
+    lstComparableSorted.sort();
 
     List<Account> lstAccountSorted = new List<Account>();
     for(AccountWrapper compIndex : lstComparableSorted) {
-        lstAccountSorted?.add(compIndex.accountReference);
+        lstAccountSorted.add(compIndex.accountReference);
     }
     return lstAccountSorted;
 }
