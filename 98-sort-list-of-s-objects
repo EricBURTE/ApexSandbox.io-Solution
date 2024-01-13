@@ -1,8 +1,17 @@
 public List<Account> getAccounts(List<Account> accounts) {
-    accounts.sort();
-    return accounts;
+    List<AccountWrapper> lstComparableSorted = new List<AccountWrapper>();
+    for (Account aIndex : accounts) {
+        lstComparableSorted.add(new AccountWrapper(aIndex));
+    }
+    lstComparableSorted.sort();
+
+    List<Account> lstAccountSorted = new List<Account>();
+    for(AccountWrapper compIndex : lstComparableSorted) {
+        lstAccountSorted.add(compIndex.accountReference);
+    }
+    return lstAccountSorted;
 }
-// write extra class here 
+
 public class AccountWrapper implements Comparable {
     public Account accountReference;
     public AccountWrapper (Account acc) {
