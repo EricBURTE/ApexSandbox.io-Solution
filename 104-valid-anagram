@@ -1,8 +1,8 @@
 public boolean isAnagram(String s1, String s2) {
     if ( s1==null || s2==null || s1.length()!=s2.length() ) { return false ; }
-    List<string> ls1 = s1.split('');
-    List<string> ls2 = s2.split('');
-    ls1.sort();
-    ls2.sort();
+    List<string> ls1 = s1.split('').sort();
+    List<string> ls2 = s2.split('').sort();
+    //ls1.sort();
+    //ls2.sort();
     return ls1==ls2;
 }
