@@ -3,7 +3,7 @@ public List<Account> getAccounts(List<Account> accounts) {
     for (Account aIndex : accounts) {
         lstComparableSorted.add(new AccountWrapper(aIndex));
     }
-    lstComparableSorted.sort();
+    lstComparableSorted?.sort();
 
     List<Account> lstAccountSorted = new List<Account>();
     for(AccountWrapper compIndex : lstComparableSorted) {
