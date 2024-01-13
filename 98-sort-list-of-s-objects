@@ -7,7 +7,7 @@ public List<Account> getAccounts(List<Account> accounts) {
 
     List<Account> lstAccountSorted = new List<Account>();
     for(AccountWrapper compIndex : lstComparableSorted) {
-        lstAccountSorted.add(compIndex.accountReference);
+        lstAccountSorted?.add(compIndex.accountReference);
     }
     return lstAccountSorted;
 }
