@@ -20,4 +20,3 @@ public Boolean isSubSequence(String s1, String s2){
     return count == s1.length();    
 
 }
-}
