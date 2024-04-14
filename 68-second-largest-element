@@ -1,5 +1,6 @@
 public Integer secondLargest(List<Integer> numbers) {
-    Integer iMaximum=Integer.MIN_VALUE, iSecondBest=Integer.MIN_VALUE;
+    Integer iMaximum = Integer.MIN_VALUE;
+    Integer iSecondBest = Integer.MIN_VALUE;
     for (Integer i : numbers) {
         if (i>iMaximum) {
             iMaximum = i;
