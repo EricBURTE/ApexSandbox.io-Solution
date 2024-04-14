@@ -2,7 +2,7 @@ public Integer secondLargest(List<Integer> numbers) {
     Set<Integer> sListInput = new Set<Integer>(numbers.sort());
     sListInput.sort();
     return  sListInput.size()>1 ? 
-            (new list<string>(sListInput))[0sListInput.size()-2] :
+            (new list<string>(sListInput))[sListInput.size()-2] :
             (new list<string>(sListInput))[0];
     
     
