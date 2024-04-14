@@ -2,8 +2,8 @@ public Integer secondLargest(List<Integer> numbers) {
     numbers.sort();
     Set<Integer> sListInput = new Set<Integer>(numbers);
     return  sListInput.size()>1 ? 
-            (new List<String>(sListInput))[sListInput.size()-2] :
-            (new List<String>(sListInput))[0];
+            (new List<Integer>(sListInput))[sListInput.size()-2] :
+            (new List<Integer>(sListInput))[0];
     
     /*    
     Integer iMaximum = -2147483647, iSecondBest=-2147483647;
