@@ -1,5 +1,6 @@
 public Integer secondLargest(List<Integer> numbers) {
-    Set<Integer> sListInput = new Set<Integer>(numbers.sort());
+    numbers.sort();
+    Set<Integer> sListInput = new Set<Integer>(numbers);
     sListInput.sort();
     return  sListInput.size()>1 ? 
             (new list<string>(sListInput))[sListInput.size()-2] :
