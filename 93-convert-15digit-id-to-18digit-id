@@ -9,7 +9,7 @@ public String convert15to18DigitId(String fifteenDigit)
     For (Integer iChunkSplit=1; iChunkSplit<=3; iChunkSplit++){
         Integer iAsciiCode = 0;
         For (Integer iCurseur = 1; iCurseur<=5; iCurseur++){
-            Integer iPos = (iChunkSplit-1) * 5 + (iCurseur - 1);
+            Integer iPos = (iChunkSplit-1)*5 + (iCurseur-1);
             String sChar = fifteenDigit.substring(iPos,iPos+1);
             Integer iIsCharUppercase = sChar.isAllUpperCase()?1:0;
             iAsciiCode += iIsCharUppercase * Integer.valueOf(Math.pow(2,iCurseur-1));
