@@ -1,0 +1,10 @@
+public static Integer findLast(List<Integer> nums, Integer target) {
+   Integer indexSearched = -1, indexCurrent = -1;
+   for (Integer i:nums) {
+       indexCurrent++;
+       if (i==target){
+           indexSearch = indexCurrent;
+       }
+   }
+   return indexSearch;
+}
