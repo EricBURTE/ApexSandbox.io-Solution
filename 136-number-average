@@ -1,0 +1,11 @@
+public Decimal average(List<Decimal> numbers){
+    Decimal dTotal = 0;
+    Integer iCompteur = 0;
+
+    for (Decimal dCurrent : numbers) {
+        dTotal += dCurrent;
+        iCompteur++;
+    }
+
+    return (dTotal.setScale(2));
+}
