@@ -3,8 +3,8 @@ public static Integer findLast(List<Integer> nums, Integer target) {
    for (Integer i:nums) {
        indexCurrent++;
        if (i==target){
-           indexSearch = indexCurrent;
+           indexSearched = indexCurrent;
        }
    }
-   return indexSearch;
+   return indexSearched;
 }
