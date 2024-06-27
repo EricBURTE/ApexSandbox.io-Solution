@@ -1,0 +1,9 @@
+public Integer findTargetCount(List<Integer> nums, Integer target) {
+   Integer iCompteur = 0;
+   for (Integer i:nums) {
+       if (i==target){
+           iCompteur++;
+       }
+   }
+   return iCompteur;
+}
