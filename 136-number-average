@@ -1,5 +1,5 @@
 public Decimal average(List<Decimal> numbers){
-    Decimal dTotal = 0;
+    Decimal dTotal = 0, dAverage = 0;
     Integer iCompteur = 0;
 
     for (Decimal dCurrent : numbers) {
@@ -7,5 +7,6 @@ public Decimal average(List<Decimal> numbers){
         iCompteur++;
     }
 
-    return (dTotal.setScale(2));
+    dAverage = dTotal / iCompteur;
+    return (dAverage.setScale(2));
 }
