@@ -6,14 +6,10 @@ public Boolean isKeyAccount(Account a) {
                                                 'Retail' => 2000000,
                                                 'Others' => 500000
                                             };
-    List<String> listIndustriesWithDefinedThresholds = new List<String> {'Banking','Technology','Retail'};               
+    List<String> listIndustriesWithDefinedThresholds = new List<String> {'Banking','Technology','Retail'};
+                   
     String sIndustry = listIndustriesWithDefinedThresholds.contains(a.Industry) ? a.Industry : 'Others';
 
-    /*
-    if (sIndustry!='Banking' && sIndustry!='Technology' && sIndustry!='Retail'){
-        sIndustry = 'Others';
-    }*/
-    
     if (a.AnnualRevenue >= mapYearlyRevenueRef.get(sIndustry)) {
         isAboveThreshold = true;
     }
