@@ -1,4 +1,4 @@
-public Boolean isKeyAccount(Account a) {
+public Boolean isKeyAccount(Account a) { //Proposition Eric Burté
     Boolean isAboveThreshold = false;  
     Map<String,Double> mapYearlyRevenueRef = new Map<String,Double> {
                                                 'Banking' => 600000,
@@ -7,7 +7,7 @@ public Boolean isKeyAccount(Account a) {
                                                 'Others' => 500000
                                             };
     List<String> listIndustriesWithDefinedThresholds = new List<String> {'Banking','Technology','Retail'};
-                   
+
     String sIndustry = listIndustriesWithDefinedThresholds.contains(a.Industry) ? a.Industry : 'Others';
 
     if (a.AnnualRevenue >= mapYearlyRevenueRef.get(sIndustry)) {
