@@ -7,7 +7,6 @@ public Boolean isKeyAccount(Account a) { //Proposition Eric Burté
                                                 'Others' => 500000
                                             };
     List<String> listIndustriesWithDefinedThresholds = new List<String> {'Banking','Technology','Retail'};
-
     String sIndustry = listIndustriesWithDefinedThresholds.contains(a.Industry) ? a.Industry : 'Others';
 
     if (a.AnnualRevenue >= mapYearlyThresholdPerIndustry.get(sIndustry)) {
