@@ -1,0 +1,3 @@
+public static Integer findLargest(List<Integer> nums) {
+	return nums.sort().getat(nums.size()-1);
+}
