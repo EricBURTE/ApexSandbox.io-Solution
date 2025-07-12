@@ -8,6 +8,9 @@ public String aOrAn(String word) {
     return sArticle + ' ' + word;
     */ 
 
-    List<String> vowels = new List<String>{'a', 'e', 'i', 'o', 'u'};    
-    return vowels.contains(word.left(1)) ? 'an ' + word : 'a ' + word;
+    //List<String> vowels = new List<String>{'a', 'e', 'i', 'o', 'u'};    
+    //return vowels.contains(word.left(1)) ? 'an ' + word : 'a ' + word;
+
+    return (Math.Mod((13359532095/char(word.left(1))),1)>0 ? 'an ':'a ') + word;
+
 }
