@@ -1,8 +1,13 @@
 public String aOrAn(String word) {
+    /*
     String sArticle = 'an';
     list<String> lsVoyels = new list<String> {'a','e','i','o','u'};
     if (lsVoyels.contains(word.substring(0,1))) {
         sArticle = 'a';
     }
     return sArticle + ' ' + word;
+    */ 
+
+    List<String> vowels = new List<String>{'a', 'e', 'i', 'o', 'u'};    
+    return vowels.contains(word.left(1)) ? 'an ' + word : 'a ' + word;
 }
