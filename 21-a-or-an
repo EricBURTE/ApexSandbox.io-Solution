@@ -1,9 +1,9 @@
 public String aOrAn(String word) {
     
-    String sArticle = 'an';
+    String sArticle = 'a';
     list<String> lsVoyels = new list<String> {'a','e','i','o','u'};
     if (lsVoyels.contains(word.substring(0,1))) {
-        sArticle = 'a';
+        sArticle = 'an';
     }
     return sArticle + ' ' + word;
     
